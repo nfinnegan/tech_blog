@@ -35,6 +35,8 @@ const hbs = exphbs.create({});
 app.engine("handlebars", hbs.engine);
 app.set("view engine", "handlebars");
 
+//app.set("views", path.join(__dirname, "views"));
+
 //Body Parser Middleware
 app.use(express.json());
 app.use(express.urlencoded({ extended: true }));
