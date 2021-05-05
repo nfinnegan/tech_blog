@@ -11,17 +11,21 @@
 </head>
 
 <body>
-  <header>
+  {{!-- <header>
     <h1>The Tech Blog</h1>
-  </header>
-  <nav>
-    <a href="/">Home</a>
-    <a href="/dashboard">Dashboard</a>
+  </header> --}}
+  <nav class="navbar navbar-expand-lg">
+     <div class="container-fluid">
+    <h1>The Tech Blog</h1>
+     <div class="navbar-nav">
+    <a class="nav-link active" aria-current="page" href="#">Home</a>
     {{#if loggedIn}}
-    <button id="logout" class="btn-no-style">Logout</button>
+    <button id="logout" class="btn-no-style nav-link">Logout</button>
     {{else}}
-    <a href="/login">Login</a>
+    <a class="nav-link" href="/login">Login</a>
     {{/if}}
+      </div>
+    </div>
   </nav>
   <main>
     <div class="allBlogs">

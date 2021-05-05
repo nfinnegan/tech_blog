@@ -1,0 +1,25 @@
+body {
+  background-color: #3d405b;
+}
+
+.navbar {
+  background-color: #81b29a;
+  height: 100px;
+}
+
+h1 {
+  color: white;
+}
+.nav-link {
+  color: white;
+  font-size: 16pt;
+}
+
+.card {
+  margin: 15px;
+}
+
+.card-header {
+  display: flex;
+  justify-content: space-between;
+}

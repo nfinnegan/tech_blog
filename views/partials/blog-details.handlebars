@@ -1,8 +1,8 @@
-
+<section class="container">
 <div class="card">
   <div class="card-header">
    {{title}}
-   <span>Posted by:{{user.username}} on {{createdAt}}</span>
+   <span>Posted by: {{user.username}} on {{format_date createdAt}}</span>
   </div>
   <div class="card-body">
     <blockquote class="blockquote mb-0">
@@ -10,3 +10,4 @@
     </blockquote>
   </div>
 </div>
+</section>

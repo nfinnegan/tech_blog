@@ -1,14 +1,15 @@
 // Dependencies
 const path = require("path");
 const express = require("express");
-const sequelize = require("./config/connection");
+const exphbs = require("express-handlebars");
 const session = require("express-session");
 
 // Initializes Sequelize with session store
 const SequelizeStore = require("connect-session-sequelize")(session.Store);
 
-const exphbs = require("express-handlebars");
 const routes = require("./controllers");
+const sequelize = require("./config/connection");
+const helpers = require("./utils/helpers");
 
 // Sets up the Express App
 const app = express();
@@ -29,7 +30,7 @@ const sess = {
 
 app.use(session(sess));
 
-const hbs = exphbs.create({});
+const hbs = exphbs.create({ helpers });
 
 // Set Handlebars as the default template engine.
 app.engine("handlebars", hbs.engine);
