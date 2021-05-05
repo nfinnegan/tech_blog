@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Tech Blog</title>
+  {{!-- <link rel="stylesheet" type="text/css" href="/css/jass.css"> --}}
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+  <link rel="stylesheet" type="text/css" href="/css/style.css">
+</head>
+
+<body>
+  {{!-- <header>
+    <h1>The Tech Blog</h1>
+  </header> --}}
+  <nav class="navbar navbar-expand-lg">
+     <div class="container-fluid">
+    <h1>The Tech Blog</h1>
+     <div class="navbar-nav">
+    <a class="nav-link active" aria-current="page" href="/">Home</a>
+    <a class="nav-link active" aria-current="page" href="#">Dashboard</a>
+    {{#if loggedIn}}
+    <a id="logout" href="/" class="nav-link active" style="color:white hover:#e07a5f">Logout</a>
+    {{else}}
+    <a class="nav-link active" href="/login">Login</a>
+    {{/if}}
+      </div>
+    </div>
+  </nav>
+  <main>
+    <div class="allBlogs">
+      {{{body}}}
+    </div>
+  </main>
+  {{#if loggedIn}}
+  <script src="/js/logout.js"></script>
+  {{/if}}
+</body>
+
+</html>
