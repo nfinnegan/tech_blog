@@ -22,4 +22,12 @@ h1 {
 .card-header {
   display: flex;
   justify-content: space-between;
+  font-weight: bolder;
+}
+
+.logInCard {
+  border: #e07a5f solid 2px;
+  background-color: #81b29a;
+  color: white;
+  padding: 15px;
 }
