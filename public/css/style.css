@@ -25,9 +25,16 @@ h1 {
   font-weight: bolder;
 }
 
-.logInCard {
+.logInCard,
+.signInCard {
   border: #e07a5f solid 2px;
   background-color: #81b29a;
   color: white;
   padding: 15px;
+}
+
+.loginBtn,
+.signInBtn {
+  background-color: #3d405b;
+  border-style: none;
 }
