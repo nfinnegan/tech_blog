@@ -1,0 +1,17 @@
+<h2>Your Dashboard</h2>
+<section class="container">
+    <div>
+        <h3>Current Posts:</h3>
+    </div>
+<div class="card">
+  <div class="card-header">
+   {{title}}
+   <span>Posted by: {{user.username}} on {{format_date createdAt}}</span>
+  </div>
+  {{!-- <div class="card-body">
+    <blockquote class="blockquote mb-0">
+      <p>{{content}}</p>
+    </blockquote>
+  </div> --}}
+</div>
+</section>
