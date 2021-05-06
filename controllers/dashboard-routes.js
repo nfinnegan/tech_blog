@@ -4,10 +4,10 @@ const withAuth = require("../utils/auth");
 
 // GET blog posts for dashboard when user is signed in
 router.get("/", withAuth, async (req, res) => {
-  //   if (req.session.loggedIn) {
-  //     res.redirect("/");
-  //     return;
-  //   }
+  if (!req.session.loggedIn) {
+    res.redirect("/");
+    return;
+  }
   try {
     const dbBlogPostData = await BlogPosts.findAll({
       where: {
@@ -27,6 +27,7 @@ router.get("/", withAuth, async (req, res) => {
   }
 });
 
+//Create new blog entry
 router.post("/", withAuth, (req, res) => {
   BlogPosts.create({
     user_id: req.session.user_id,
@@ -35,6 +36,15 @@ router.post("/", withAuth, (req, res) => {
   })
     .then(() => res.redirect("/dashboard"))
     .catch((err) => res.status(500).json(err));
+});
+
+//creating route for new post button to serve up new blog post handlebars
+router.get("/newpost", withAuth, (req, res) => {
+  if (!req.session.loggedIn) {
+    res.redirect("/");
+    return;
+  }
+  res.render("new-post");
 });
 
 module.exports = router;

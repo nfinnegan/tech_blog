@@ -56,10 +56,9 @@ h1 {
 
 #newPostBtn {
   border-radius: 8px;
-  color: white;
   position: relative;
   top: 100px;
-  left: 500px;
+  left: 650px;
   padding-top: 5px;
   padding-bottom: 5px;
   padding-left: 20px;
@@ -69,6 +68,20 @@ h1 {
   background-color: #81b29a;
 }
 
-#newPostBtn:hover {
+#newPostLink {
+  color: white;
+}
+
+#newPostLink:hover {
   color: #e07a5f;
+}
+
+.postBtn {
+  border-radius: 8px;
+  font-size: 20pt;
+  border-color: black;
+  width: 25%;
+  background-color: #81b29a;
+  color: white;
+  padding: 0px 20px;
 }
