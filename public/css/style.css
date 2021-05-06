@@ -42,3 +42,13 @@ h1 {
   background-color: #3d405b;
   border-style: none;
 }
+
+#dashboardTitle {
+  padding: 15px;
+  margin-left: 20px;
+  color: white;
+}
+
+#dashboardPosts {
+  color: white;
+}
