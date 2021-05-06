@@ -27,6 +27,7 @@ h1 {
   display: flex;
   justify-content: space-between;
   font-weight: bolder;
+  color: black;
 }
 
 .logInCard,
@@ -51,4 +52,23 @@ h1 {
 
 #dashboardPosts {
   color: white;
+}
+
+#newPostBtn {
+  border-radius: 8px;
+  color: white;
+  position: relative;
+  top: 100px;
+  left: 500px;
+  padding-top: 5px;
+  padding-bottom: 5px;
+  padding-left: 20px;
+  padding-right: 20px;
+  font-size: 20pt;
+  border-color: black;
+  background-color: #81b29a;
+}
+
+#newPostBtn:hover {
+  color: #e07a5f;
 }

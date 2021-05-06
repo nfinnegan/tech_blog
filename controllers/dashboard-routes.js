@@ -27,4 +27,14 @@ router.get("/", withAuth, async (req, res) => {
   }
 });
 
+router.post("/", withAuth, (req, res) => {
+  BlogPosts.create({
+    user_id: req.session.user_id,
+    title: req.body.title,
+    content: req.body.content,
+  })
+    .then(() => res.redirect("/dashboard"))
+    .catch((err) => res.status(500).json(err));
+});
+
 module.exports = router;

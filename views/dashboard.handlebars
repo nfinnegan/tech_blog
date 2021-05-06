@@ -1,3 +1,12 @@
+<h2 id="dashboardTitle">Your Dashboard</h2>
+<section class="container">
+    <div id="dashboardPosts">
+        <h3>Current Posts:</h3>
 {{#each allBlogs as |blog|}}
 {{> dashboard-details}}
 {{/each}}
+ </div>
+ </section>
+ <div>
+     <button id="newPostBtn" type="button">+ New Post</button>
+ </div>
