@@ -5,7 +5,7 @@ const newPostHandler = async (event) => {
   const newContent = document.querySelector("#newPostContent").value.trim();
 
   if (newTitle && newContent) {
-    const response = await fetch("api/blog", {
+    const response = await fetch("/dashboard", {
       method: "POST",
       body: JSON.stringify({ newTitle, newContent }),
       headers: { "Content-Type": "application/json" },

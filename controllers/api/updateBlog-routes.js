@@ -5,10 +5,6 @@ const withAuth = require("../../utils/auth");
 //GET existing blog post
 
 router.get("/:id", withAuth, async (req, res) => {
-  if (!req.session.loggedIn) {
-    res.redirect("/");
-    return;
-  }
   const selectedBlog = await BlogPosts.findOne({
     where: {
       id: req.params.id,
