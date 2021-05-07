@@ -81,7 +81,9 @@ h1 {
   color: #e07a5f;
 }
 
-.postBtn {
+.postBtn,
+.updateBtn,
+.deleteBtn {
   border-radius: 8px;
   font-size: 20pt;
   border-color: black;
@@ -89,4 +91,8 @@ h1 {
   background-color: #81b29a;
   color: white;
   padding: 0px 20px;
+}
+
+.updateBtn {
+  margin-right: 20px;
 }

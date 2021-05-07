@@ -24,7 +24,7 @@ router.get("/:id", withAuth, async (req, res) => {
 //Update existing blog post
 router.put("/:id", withAuth, async (req, res) => {
   console.log(req.body.updatedTitle, req.body.updatedContent);
-  BlogPosts.update(
+   BlogPosts.update(
     {
       title: req.body.updatedTitle,
       content: req.body.updatedContent,
@@ -35,7 +35,7 @@ router.put("/:id", withAuth, async (req, res) => {
       },
     }
   )
-    .then(() => res.redirect("/"))
+    .then(() => res.sendStatus(200))
     .catch((err) => res.status(500).json(err));
 });
 

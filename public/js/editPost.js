@@ -11,15 +11,16 @@ const editPostHandler = async (event) => {
     window.location.toString().split("/").length - 1
   ];
 
+  
   if (updatedTitle && updatedContent) {
-    const response = await fetch(`/${id}`, {
+    const response = await fetch(`/api/blog/${id}`, {
       method: "PUT",
       body: JSON.stringify({ updatedTitle, updatedContent }),
       headers: { "Content-Type": "application/json" },
     });
-
+    console.log(response);
     if (response.ok) {
-      document.location.replace("/"); //should this be /dashboard?
+      document.location.replace("/dashboard"); //should this be /dashboard?
     } else {
       alert("Failed to update!");
     }
