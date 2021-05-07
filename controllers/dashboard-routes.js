@@ -53,19 +53,25 @@ router.get("/:id", withAuth, async (req, res) => {
     res.redirect("/");
     return;
   }
-  BlogPosts.findOne(
-    {
-      title: req.body.title,
-      content: req.body.content,
-    },
+  const selectedBlog = await BlogPosts.findOne(
+    // {
+    //   title: req.body.title,
+    //   content: req.body.content,
+    // },
     {
       where: {
         id: req.params.id,
       },
     }
   );
-  console.log(req.body);
-  res.render("edit-post");
+  console.log({
+    title: selectedBlog.title,
+    content: selectedBlog.content,
+  });
+  res.render("edit-post", {
+    title: selectedBlog.title,
+    content: selectedBlog.content,
+  });
 });
 
 module.exports = router;
