@@ -46,32 +46,4 @@ router.get("/newpost", withAuth, (req, res) => {
   res.render("new-post");
 });
 
-//GET existing post
-router.get("/:id", withAuth, async (req, res) => {
-  console.log(req.params.id);
-  if (!req.session.loggedIn) {
-    res.redirect("/");
-    return;
-  }
-  const selectedBlog = await BlogPosts.findOne(
-    // {
-    //   title: req.body.title,
-    //   content: req.body.content,
-    // },
-    {
-      where: {
-        id: req.params.id,
-      },
-    }
-  );
-  console.log({
-    title: selectedBlog.title,
-    content: selectedBlog.content,
-  });
-  res.render("edit-post", {
-    title: selectedBlog.title,
-    content: selectedBlog.content,
-  });
-});
-
 module.exports = router;
