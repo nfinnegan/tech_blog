@@ -30,13 +30,12 @@ const sess = {
 
 app.use(session(sess));
 
+// Incorporate the custom helper methods
 const hbs = exphbs.create({ helpers });
 
 // Set Handlebars as the default template engine.
 app.engine("handlebars", hbs.engine);
 app.set("view engine", "handlebars");
-
-//app.set("views", path.join(__dirname, "views"));
 
 //Body Parser Middleware
 app.use(express.json());
