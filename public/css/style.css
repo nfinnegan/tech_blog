@@ -54,6 +54,10 @@ h1 {
   color: white;
 }
 
+.dashPosts {
+  color: black;
+}
+
 #newPostBtn {
   border-radius: 8px;
   position: relative;
@@ -72,7 +76,8 @@ h1 {
   color: white;
 }
 
-#newPostLink:hover {
+.postBtn,
+.dashPosts:hover {
   color: #e07a5f;
 }
 

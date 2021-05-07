@@ -22,7 +22,6 @@ router.get("/", withAuth, async (req, res) => {
       loggedIn: req.session.loggedIn,
     });
   } catch (err) {
-    console.log(err);
     res.status(500).json(err);
   }
 });
@@ -45,6 +44,28 @@ router.get("/newpost", withAuth, (req, res) => {
     return;
   }
   res.render("new-post");
+});
+
+//GET existing post
+router.get("/:id", withAuth, async (req, res) => {
+  console.log(req.params.id);
+  if (!req.session.loggedIn) {
+    res.redirect("/");
+    return;
+  }
+  BlogPosts.findOne(
+    {
+      title: req.body.title,
+      content: req.body.content,
+    },
+    {
+      where: {
+        id: req.params.id,
+      },
+    }
+  );
+  console.log(req.body);
+  res.render("edit-post");
 });
 
 module.exports = router;

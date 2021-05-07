@@ -1,0 +1,23 @@
+<div class="container">
+<div class="card editPostCard">
+      <div class="card-header">
+    Edit Blog Post
+  </div>
+ <form class="card-body newPostCard">
+  <div class="mb-3">
+    <label for="post-title" class="form-label">Title:</label>
+    <input type="input" id="newPostTitle" class="form-control" value="{{title}}">
+   </div>
+  
+  <div class="mb-3">
+    <label for="content" class="form-label">Content:</label>
+    <textarea type="input" id="newPostContent" class="form-control" value="{{content}}"></textarea>
+  </div>
+  <button type="submit" class="btn updateBtn">Update Post</button>
+  <button type="submit" class="btn deleteBtn">Delete Post</button>
+  <br>
+ </form>
+</div>
+</div>
+
+{{!-- <script src="/js/newPost.js"></script> --}}
