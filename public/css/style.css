@@ -23,10 +23,11 @@ h1 {
   margin: 15px;
 }
 
-.card-header {
+.card-header,
+#postTitle {
   display: flex;
   justify-content: space-between;
-  font-weight: bolder;
+  font-weight: bold;
   color: black;
 }
 
@@ -83,7 +84,8 @@ h1 {
 
 .postBtn,
 .updateBtn,
-.deleteBtn {
+.deleteBtn,
+.commentBtn {
   border-radius: 8px;
   font-size: 20pt;
   border-color: black;

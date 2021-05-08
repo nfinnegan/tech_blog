@@ -1,0 +1,32 @@
+{{blog-details}}
+<section class="container">
+<div class="card">
+  <div class="card-header">
+    <a id="postTitle" href="api/comments/{{id}}">{{title}}</a>
+   <span>Posted by: {{user.username}} on {{format_date date}}</span>
+  </div>
+  <div class="card-body">
+    <blockquote class="blockquote mb-0">
+      <p>{{content}}</p>
+    </blockquote>
+  </div>
+</div>
+</section>
+
+<div class="container">
+<div class="card newPostCard">
+      <div class="card-header">
+    Comment On Post
+  </div>
+ <form class="card-body commentCard">
+  <div class="mb-3">
+    <label for="comment" class="form-label">Tell us your thoughts:</label>
+    <textarea type="input" id="commentContent" class="form-control"></textarea>
+  </div>
+  <button type="button" class="btn commentBtn">Post Comment!</button>
+  <br>
+ </form>
+</div>
+</div>
+
+<script src="/js/comment.js"></script>
