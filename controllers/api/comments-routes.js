@@ -21,12 +21,16 @@ router.get("/:id", withAuth, async (req, res) => {
 //Create new comment entry
 router.post("/", withAuth, (req, res) => {
   Comments.create({
-    content: req.body.commentContent,
+    comment: req.body.commentContent,
     blog_id: req.body.id,
     user_id: req.session.user_id,
   })
-    .then(() => res.status(200))
-    .catch((err) => res.status(500).json(err));
+
+    .then(() => res.sendStatus(200))
+    .catch((err) => {
+      console.log(err);
+      res.status(500).json(err);
+    });
 });
 
 module.exports = router;
