@@ -34,14 +34,13 @@ router.post("/", withAuth, (req, res) => {
     });
 });
 
-//get comments
-router.get('/:id',withAuth, (req,res)=>{
-  Comments.findAll({
-    where: {
-      blog_id: req.params.id
-    }
-  })
-})
-
+// //get comments
+// router.get('/:id',withAuth, (req,res)=>{
+//   Comments.findAll({
+//     where: {
+//       blog_id: req.params.id
+//     }
+//   })
+// })
 
 module.exports = router;
