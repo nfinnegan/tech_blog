@@ -16,17 +16,15 @@
 <div class="container">
 <div class="card newPostCard">
       <div class="card-header">
-    Comment On Post
+    Comment
   </div>
  <form class="card-body commentCard">
   <div class="mb-3">
-    <label for="comment" class="form-label">Tell us your thoughts:</label>
-    <textarea type="input" id="commentContent" class="form-control"></textarea>
+    <textarea type="input" id="commentContent" class="form-control">{{comment}}</textarea>
   </div>
-  <button type="button" href="api/comments/{{id}}" class="btn commentBtn">Post Comment!</button>
-  <br>
+    <div>
+        -{{user.username}}, {{format_date created_at}}
+    </div>  
  </form>
 </div>
 </div>
-
-<script src="/js/comment.js"></script>
