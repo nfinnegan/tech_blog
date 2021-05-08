@@ -1,0 +1,19 @@
+
+
+<div class="container">
+    {{#if commentContent}}
+<div class="card newPostCard">
+      <div class="card-header">
+    Comment
+  </div>
+ <form class="card-body commentCard">
+  <div class="mb-3">
+    <p id="commentContent" class="form-control">{{comment}}</p>
+  </div>
+    <div>
+        -{{user.username}}, {{format_date created_at}}
+    </div>  
+ </form>
+</div>
+</div>
+{{/if}}
