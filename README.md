@@ -75,12 +75,6 @@ Check out the DEPLOYED application here:
 
 For this application, I definitely ran into a number of challenges as it relates to routes. Having worked through those were are two known issues I couldn't resolve, but would be good to revisit for future development. 
 
-Bug:
-- Signing Up:
-   When a user navigates to dashboard and choose sign up, the user can successfully sign up. Once signed up, the user is re-directed to the homepage. However, if the user navigates to dashboard again immediately after signing up they're brought to a page displaying an empty object `{}`. 
-   
-   The user has to return to the homepage, logout, then login with the newly created username/password. Once that is done, the user can successfully navigate to the dashboard and utilize the applications functionality.
-
 Incomplete/Unresolved:   
 - Commenting:
     When a user is on the homepage, they can click on the title of the blog post to share their thoughts. Once the button has been clicked to the post the comment, it is saved to the database. I intentionally left the user on the comments page so they can see their comment displayed/added to the blog post. However, I was having issue thinking through how to serve up the correct handlebars view. On button click, I create a new database entry of the user's comment, but I couldn't think through how to create an additional action where I can use JavaScript to fetch the comments from the DB to view.
