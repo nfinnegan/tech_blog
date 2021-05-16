@@ -4,10 +4,6 @@ const withAuth = require("../utils/auth");
 
 // GET blog posts for dashboard when user is signed in
 router.get("/", withAuth, async (req, res) => {
-  if (!req.session.loggedIn) {
-    res.redirect("/");
-    return;
-  }
   try {
     const dbBlogPostData = await BlogPosts.findAll({
       where: {
@@ -15,12 +11,15 @@ router.get("/", withAuth, async (req, res) => {
       },
     });
     // res.status(200).json(dbBlogPostData);
-
-    const allBlogs = dbBlogPostData.map((post) => post.get({ plain: true }));
-    res.render("dashboard", {
-      allBlogs,
-      loggedIn: req.session.loggedIn,
-    });
+    if (dbBlogPostData.length > 1) {
+      const allBlogs = dbBlogPostData.map((post) => post.get({ plain: true }));
+      res.render("dashboard", {
+        allBlogs,
+        loggedIn: req.session.loggedIn,
+      });
+    } else {
+      res.render("dashboard");
+    }
   } catch (err) {
     res.status(500).json(err);
   }

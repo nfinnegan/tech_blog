@@ -2,7 +2,8 @@ const router = require("express").Router();
 const { User } = require("../../models");
 
 // Create new user
-router.post("/", async (req, res) => {
+router.post("/signup", async (req, res) => {
+  console.log(req.body);
   try {
     const dbUserData = await User.create({
       username: req.body.username,
@@ -11,8 +12,10 @@ router.post("/", async (req, res) => {
 
     req.session.save(() => {
       req.session.loggedIn = true;
+      req.session.user_id = dbUserData.dataValues.id;
 
       res.status(200).json(dbUserData);
+      //res.render("dashboard");
     });
   } catch (err) {
     console.log(err);
