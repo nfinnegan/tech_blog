@@ -11,7 +11,7 @@ router.get("/", withAuth, async (req, res) => {
       },
     });
     // res.status(200).json(dbBlogPostData);
-    if (dbBlogPostData.length > 1) {
+    if (dbBlogPostData.length) {
       const allBlogs = dbBlogPostData.map((post) => post.get({ plain: true }));
       res.render("dashboard", {
         allBlogs,
