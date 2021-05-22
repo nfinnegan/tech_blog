@@ -1,7 +1,7 @@
 # tech_blog
 
 [![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
-![GitHub top language](https://img.shields.io/github/languages/top/nfinnegan/e-commerce_backend)
+![GitHub top language](https://img.shields.io/github/languages/top/nfinnegan/tech_blog)
 
 ## Description 📁
 
@@ -73,11 +73,12 @@ Check out the DEPLOYED application here:
 
 ## Challenges/Known Issue 🔴
 
-For this application, I definitely ran into a number of challenges as it relates to routes. Having worked through those were are two known issues I couldn't resolve, but would be good to revisit for future development. 
+For this application, I definitely ran into a number of challenges as it relates to routes. Having worked through those were are two known issues I couldn't resolve, but would be good to revisit for future development.
 
-Incomplete/Unresolved:   
+Incomplete/Unresolved:
+
 - Commenting:
-    When a user is on the homepage, they can click on the title of the blog post to share their thoughts. Once the button has been clicked to the post the comment, it is saved to the database. I intentionally left the user on the comments page so they can see their comment displayed/added to the blog post. However, I was having issue thinking through how to serve up the correct handlebars view. On button click, I create a new database entry of the user's comment, but I couldn't think through how to create an additional action where I can use JavaScript to fetch the comments from the DB to view.
+  When a user is on the homepage, they can click on the title of the blog post to share their thoughts. Once the button has been clicked to the post the comment, it is saved to the database. I intentionally left the user on the comments page so they can see their comment displayed/added to the blog post. However, I was having issue thinking through how to serve up the correct handlebars view. On button click, I create a new database entry of the user's comment, but I couldn't think through how to create an additional action where I can use JavaScript to fetch the comments from the DB to view.
 
 ## Resources 💡
 
